@@ -25,13 +25,18 @@ function Navbar() {
           <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a href="/#" className="nav-link active">Rockets</a>
+                <a href="/#" className="nav-link">Rockets</a>
               </li>
               <li className="nav-item">
-                <a href="/#" className="nav-link">Missions</a>
+                <NavLink to="/missions" className="nav-link">
+                  Missions
+                </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/my-profile">
+                <NavLink
+                  className="nav-link"
+                  to="/my-profile"
+                >
                   My Profile
                 </NavLink>
               </li>
