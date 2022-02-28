@@ -35,7 +35,6 @@ const missionReducer = (state = initialState, action) => {
     case TOGGLE_STATUS:
       return state.map((item) => {
         if (item.id === action.payload) {
-          console.log({ ...item, status: !item.status });
           return { ...item, status: !item.status };
         }
         return item;
