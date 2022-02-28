@@ -3,12 +3,9 @@ import { useDispatch } from 'react-redux';
 import { toggleStatus } from '../../redux/missions/missions';
 
 function Mission(Props) {
-  const dispatch = useDispatch;
-  const updateStatus = (id) => {
-    dispatch(toggleStatus(id));
-  };
+  const dispatch = useDispatch();
   const handleClick = (e) => {
-    updateStatus(e.target.value);
+    dispatch(toggleStatus(e.target.value));
   };
   const { mission } = Props;
   return (
@@ -16,7 +13,7 @@ function Mission(Props) {
       <th scope="row">
         { mission.name }
       </th>
-      <td colSpan="2">
+      <td colSpan>
         {mission.description}
       </td>
       <td>
@@ -25,7 +22,9 @@ function Mission(Props) {
         </span>
       </td>
       <td>
-        <button className={mission.status ? 'btn btn-danger' : 'btn btn-outline-dark'} type="button" value={mission.id} onClick={handleClick}> Join Mission </button>
+        <button className={mission.status ? 'btn btn-danger' : 'btn btn-info'} type="button" value={mission.id} onClick={handleClick}>
+          {mission.status ? 'Leave mission' : 'Join Mission'}
+        </button>
       </td>
     </tr>
   );

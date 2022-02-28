@@ -33,11 +33,12 @@ const missionReducer = (state = initialState, action) => {
     case ADD_MISSION:
       return [...state, action.payload];
     case TOGGLE_STATUS:
-      return state.filter((item) => {
-        if (item.id !== action.payload) {
-          return item;
+      return state.map((item) => {
+        if (item.id === action.payload) {
+          console.log({ ...item, status: !item.status });
+          return { ...item, status: !item.status };
         }
-        return { ...item, status: !item.status };
+        return item;
       });
     default:
       return state;
