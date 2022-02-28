@@ -31,7 +31,7 @@ function Navbar() {
                 <a href="/#" className="nav-link">Missions</a>
               </li>
               <li className="nav-item">
-                <NavLink to="/my-profile">
+                <NavLink className="nav-link" to="/my-profile">
                   My Profile
                 </NavLink>
               </li>
