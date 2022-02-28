@@ -1,13 +1,17 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import ListMission from '../../components/list-mission/ListMissions';
 import { fetchMissions } from '../../api/api';
+import { addMission } from '../../redux/missions/missions';
 
 function MissionPage() {
   const missions = useSelector(({ missionReducer }) => missionReducer);
+  const dispatch = useDispatch();
   useEffect(() => {
-    fetchMissions().then((dat) => console.log(dat));
-  });
+    fetchMissions().then((dat) => {
+      dispatch(addMission(dat));
+    });
+  }, []);
   return (
     <div>
       <div className="container">
