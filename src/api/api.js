@@ -1,5 +1,5 @@
-const rocketsUrl = 'https://...'; //TODO: Add your url code here
-const missionsUrl = 'https://...'; //TODO: Add your url code here
+const rocketsUrl = 'https://...'; // TODO: Add your url code here
+const missionsUrl = 'https://...'; // TODO: Add your url code here
 
 const getData = async (url) => {
   try {
