@@ -14,4 +14,6 @@ const store = createStore(
   compose(applyMiddleware(thunk, logger)),
 );
 
+window.store = store;
+
 export default store;
