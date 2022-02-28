@@ -3,6 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/navbar/Navbar';
 import MyProfile from './components/MyProfile';
+import MissionPage from './pages/mission-page/MissionPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MyProfile />} />
           <Route path="/my-profile" element={<MyProfile />} />
+          <Route path="/missions" element={<MissionPage />} />
         </Routes>
       </Router>
     </div>
