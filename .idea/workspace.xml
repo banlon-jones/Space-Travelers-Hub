@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d350f5f4-c829-4f2a-a279-e5abdde55345" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/mission/Mission.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/list-mission/ListMissions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/list-mission/ListMissions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/mission-page/MissionPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/mission-page/MissionPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/missions/missions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/missions/missions.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="Rockets" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
