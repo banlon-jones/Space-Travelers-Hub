@@ -4,9 +4,10 @@ import {
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import rockets from './reducers/rockets';
+import missionReducer from './missions/missions';
 
 const reducer = combineReducers({
-  rockets,
+  rockets, missionReducer,
 });
 
 const store = createStore(
