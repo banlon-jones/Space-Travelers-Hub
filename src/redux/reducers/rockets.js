@@ -1,9 +1,8 @@
-/* eslint-disable no-case-declarations */
 import { FETCH_ALL_ROCKETS, RESERVE_ROCKET, CANCEL_RESERVATION } from '../actions/actionTypes';
 
 const rockets = (state = [], action) => {
   switch (action.type) {
-    case FETCH_ALL_ROCKETS:
+    case FETCH_ALL_ROCKETS: {
       const filteredData = action.payload.map((rocket) => {
         const {
           id, rocket_name: name, rocket_type: type, flickr_images: image, description,
@@ -13,7 +12,7 @@ const rockets = (state = [], action) => {
         };
       });
       return [...state, ...filteredData];
-
+    }
     case RESERVE_ROCKET:
     case CANCEL_RESERVATION:
       return state.map((rocket) => {

@@ -25,18 +25,24 @@ function Navbar() {
           <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink to="/rockets" className="nav-link">
+                <NavLink
+                  to="/rockets"
+                  className={({ isActive }) => (isActive ? 'active px-2' : 'text-decoration-none px-3')}
+                >
                   Rockets
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/missions" className="nav-link">
+                <NavLink
+                  className={({ isActive }) => (isActive ? 'active px-2' : 'text-decoration-none px-3')}
+                  to="/missions"
+                >
                   Missions
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink
-                  className="nav-link"
+                  className={({ isActive }) => (isActive ? 'active px-2' : 'text-decoration-none px-3')}
                   to="/my-profile"
                 >
                   My Profile
