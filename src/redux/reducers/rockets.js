@@ -1,4 +1,3 @@
-/* eslint-disable no-case-declarations */
 import { FETCH_ALL_ROCKETS, RESERVE_ROCKET, CANCEL_RESERVATION } from '../actions/actionTypes';
 
 const rockets = (state = [], action) => {
