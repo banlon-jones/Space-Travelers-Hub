@@ -15,15 +15,38 @@ function MyProfile() {
     />
   ));
 
+  const missions = useSelector(({ missionReducer }) => missionReducer);
+  const myMissions = missions.filter((item) => item.status);
+
   return (
-    <div className="result">
-      <div className="Box">
-        <h2 className="title">My Rockets</h2>
-        <table className="Mission-ProfileTable">
-          <tbody>
-            {renderReservedRockets}
-          </tbody>
-        </table>
+    <div className="my-profile">
+      <div className="container mt-4">
+        <div className="row">
+          <div className="col-6">
+            <div className="card">
+              <div className="card-header">
+                <h3 className="card-title">My Missions</h3>
+              </div>
+              <ul className="list-group list-group-flush">
+                {
+                  myMissions.map((item) => <li key={item.id} className="list-group-item">{item.name}</li>)
+                }
+              </ul>
+            </div>
+          </div>
+          <div className="col-6">
+            <div className="result">
+              <div className="Box">
+                <h2 className="title">My Rockets</h2>
+                <table className="Mission-ProfileTable">
+                  <tbody>
+                    {renderReservedRockets}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

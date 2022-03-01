@@ -21,7 +21,7 @@ function App() {
           <Line />
         </header>
         <Routes>
-          <Route path="/" element={<MyProfile />} />
+          <Route path="/" element={<Rockets />} />
           <Route path="/my-profile" element={<MyProfile />} />
           <Route path="/missions" element={<MissionPage />} />
           <Route path="/rockets" element={<Rockets />} />
