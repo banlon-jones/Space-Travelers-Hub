@@ -1,9 +1,23 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import ProfileRockets from './ProfileRockets';
+import './MyProfile.css';
 
 function MyProfile() {
+  const rockets = useSelector((state) => state.rockets);
+
+  const reservedRockets = rockets.filter((rocket) => rocket.reserved === true);
+
+  const renderReservedRockets = reservedRockets.map((rocket) => (
+    <ProfileRockets
+      key={rocket.id}
+      name={rocket.name}
+    />
+  ));
+
   const missions = useSelector(({ missionReducer }) => missionReducer);
   const myMissions = missions.filter((item) => item.status);
+
   return (
     <div className="my-profile">
       <div className="container mt-4">
@@ -18,6 +32,9 @@ function MyProfile() {
                   myMissions.map((item) => <li key={item.id} className="list-group-item">{item.name}</li>)
                 }
               </ul>
+            </div>
+            <div className="col-6">
+
             </div>
           </div>
         </div>

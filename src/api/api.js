@@ -1,4 +1,4 @@
-const rocketsUrl = 'https://...'; // TODO: Add your url code here
+const rocketsUrl = 'https://api.spacexdata.com/v3/rockets';
 const missionsUrl = 'https://api.spacexdata.com/v3/missions';
 
 const getData = async (url) => {
