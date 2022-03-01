@@ -33,8 +33,17 @@ function MyProfile() {
                 }
               </ul>
             </div>
-            <div className="col-6">
-
+          </div>
+          <div className="col-6">
+            <div className="result">
+              <div className="Box">
+                <h2 className="title">My Rockets</h2>
+                <table className="Mission-ProfileTable">
+                  <tbody>
+                    {renderReservedRockets}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
